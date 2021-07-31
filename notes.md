@@ -11,7 +11,7 @@ Build a server-side calculator
 
 
 ## Server
-[] Add Node
+[X] Add Node
 [] Add Express
 [] Add JSON parsers
 
@@ -27,5 +27,5 @@ Build a server-side calculator
 ## History
 [] Keep a historical record of all math operations & solutions on the server
 [] Display a list of all previous calculations on the page when it loads a GET request
-[] Update the lsit when a new calculation is made
+[] Update the list when a new calculation is made
     []History should exist even after refreshing the page
