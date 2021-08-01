@@ -5,12 +5,12 @@ const app = express();
 const PORT = 5000;
 
 //Declaring the value the client is sending
-let userValue;
+
 //Declaring the history of the user
-let userHistory = {};
-//Declaring the return value of the function 'calculateNumbers'
 let returnValue = [];
-calculateNumbers();
+//Declaring the return value of the function 'calculateNumbers'
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -18,25 +18,66 @@ app.use(bodyParser.urlencoded({extended:true}));
 //This is where our client.js file lives
 app.use(express.static('server/public'));
 
-app.post('/calculate', function(req,res) {
-userValue = req.body;
-console.log(req, res);
+app.post('/returnValue', function(req,res) {
+let userValue = req.body;
+
+
+if(userValue.operator === 'additionBttn'){
+      let addition = {
+        calculation: Number(userValue.val1) + Number(userValue.val2),
+        val1: userValue.val1, 
+        val2: userValue.val2,
+        operator: userValue.operator
+        };
+        returnValue = [];
+        returnValue.push(addition);
+      }; 
+
+if(userValue.operator === 'subtractionBttn'){
+      let subtraction = {
+        calculation: Number(userValue.val1) - Number(userValue.val2),
+        val1: userValue.val1, 
+        val2: userValue.val2,
+        operator: userValue.operator
+        };
+        returnValue = [];
+        returnValue.push(subtraction);
+      }; 
+
+if(userValue.operator === 'multiplicationBttn'){
+      let multiplication = {
+        calculation: Number(userValue.val1) * Number(userValue.val2),
+        val1: userValue.val1, 
+        val2: userValue.val2,
+        operator: userValue.operator
+        };
+        returnValue = [];
+        returnValue.push(multiplication);
+      }; 
+
+if(userValue.operator === 'divisionBttn'){
+      let division = {
+        calculation: Number(userValue.val1) / Number(userValue.val2),
+        val1: userValue.val1, 
+        val2: userValue.val2,
+        operator: userValue.operator
+        };
+        returnValue = [];
+        returnValue.push(division);
+      }; 
+
+  res.sendStatus(200);
+
 });
 
-calculateNumbers(req.body);
-console.log(userValue);
-// Function to calculate numbers
-function calculateNumbers(req) {
-  if(req.operator === 'additionBttn'){
-    return req.val1 + req.val2;   
-    } else if (req.operator === 'subtractionBttn'){
-      return req.val1 - req.val2;
-    } else if (req.operator === 'multiplicationBttn'){
-      return req.val1 * req.val2;
-    } else if (req.operator === 'divisionBttn'){
-      return req.val1 / req.val2;
-    };
-};//end of calculateNumbers
+
+//GET response from server
+app.get('/returnValue', function(req, res) {
+    console.log('Request for /userValue was made');
+
+  //sending back the return value (calculate numbers function + userhistory)
+  res.send(returnValue);
+});
 
 
 app.listen(PORT, () => {

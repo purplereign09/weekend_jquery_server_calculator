@@ -32,19 +32,31 @@ function postNum(){
         operator: buttonClicked   
     };
     console.log(userValue);
-    POST
+    //POST
     $.ajax({ 
         method: 'POST',
-        url:'/calculate',
-        data: JSON.stringify(userValue),
-        contentType: 'application/json'
+        url:'/returnValue',
+        data: userValue,
+        // contentType: 'application/json'
     }).then(function(response) {
         console.log('POST / userValue', response);
+        displayAnswers();
     }).catch((error) => {
         console.log('failed', error);
     });
+
 };
 
-
+function displayAnswers(){
+     $.ajax({
+        method: 'GET',
+        url: '/returnValue'
+    }).then(function (response) {
+       let calcTotals = $('#calcTotals')
+       for(let calc of response){
+           calcTotals.text(calc.calculation)
+       }
+    });
+}
 
 
