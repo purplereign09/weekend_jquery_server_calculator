@@ -3,8 +3,12 @@ console.log('hi');
 
 //Global array collecting input value one
  let userValue = { };
+ 
  //set a global variable to a button on the interface to be able to track it
  let buttonClicked;   
+
+ //declaring a variable that hold all calculation totals
+let calculationTotals = [];
 
 //getting our jQuery function installed to the page
 function onReady(){
@@ -18,6 +22,9 @@ function onReady(){
         postNum();
     });
 
+    $('#clearBttn').click(function (){
+        clearTotals();
+    });
 };
 
 function postNum(){
@@ -47,6 +54,13 @@ function postNum(){
 
 };
 
+function clearTotals(){
+    $('#clearBttn').click(function (){
+        $('#numOne').val('');
+        $('#numTwo').val('');
+    });
+};
+
 function displayAnswers(){
      $.ajax({
         method: 'GET',
@@ -57,6 +71,7 @@ function displayAnswers(){
            calcTotals.text(calc.calculation)
        }
     });
-}
+    $('#historyValues').append('totals');
+};
 
 

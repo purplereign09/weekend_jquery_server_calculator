@@ -1,14 +1,14 @@
 Build a server-side calculator
-    []logic must be implemented on the server
+    [X]logic must be implemented on the server
 
 ## Calculator
 [X] Create a user interface where the user can input 2 values
 [X] Select the type of mathematical operation 
     [X] When the submit(=) button is clicked OR .on click function
     [X] Add it to an object
-    [] Send it to the SERVER via a  ## POST method ##
+    [X] Send it to the SERVER via a  ## POST method ##
         [] 
-    [] Clear the input fields using a 'C' button
+    [X] Clear the input fields using a 'C' button
 
 
 ## Server
@@ -16,14 +16,14 @@ Build a server-side calculator
 [X] Add Express
 [X] Add JSON parsers
 
-[] Insert  function to handle logic for the following
-    [] Addition
-    [] Subtraction
-    [] Multiplication
-    [] Division
+[X] Insert  function to handle logic for the following
+    [X] Addition
+    [X] Subtraction
+    [X] Multiplication
+    [X] Division
 
-[] Once the calculation is complete, send back the OK
-[] Do a GET request after the POST to get the actual calculation
+[X] Once the calculation is complete, send back the OK
+[X] Do a GET request after the POST to get the actual calculation
 
 ## History
 [] Keep a historical record of all math operations & solutions on the server
