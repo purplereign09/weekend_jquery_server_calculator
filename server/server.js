@@ -15,6 +15,21 @@ let userValue = req.body;
 console.log(req, res);
 });
 
+//Function to calculate numbers
+function calculateNumbers(req) {
+  if(req.operator === 'additionBttn'){
+    return req.val1 + req.val2;   
+    } else if (req.operator === 'subtractionBttn'){
+      return req.val1 - req.val2;
+    } else if (req.operator === 'multiplicationBttn'){
+      return req.val1 * req.val2;
+    } else if (req.operator === 'divisionBttn'){
+      return req.val1 / req.val2;
+    }
+  
+}//end of calculateNumbers
+
+
 app.listen(PORT, () => {
   //console.log ('Server is running on port', PORT)
   console.log (`Connect to: http://localhost:${PORT}`);
@@ -27,4 +42,3 @@ app.listen(PORT, () => {
 
 
 
-    

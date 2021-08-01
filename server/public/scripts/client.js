@@ -38,7 +38,6 @@ function postNum(){
         method: 'POST',
         url:'/calculate',
         data: JSON.stringify(userValue),
-        // data: {JSON.stringify(guesses)},
         contentType: 'application/json'
     }).then(function(response) {
         console.log('we are not getting here');
