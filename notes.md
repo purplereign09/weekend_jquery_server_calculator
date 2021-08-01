@@ -2,20 +2,21 @@ Build a server-side calculator
     []logic must be implemented on the server
 
 ## Calculator
-[] Create a user interface where the user can input 2 values
-[] Select the type of mathematical operation 
-    [] When the submit(=) button is clicked OR .on click function
-    [] Add it to an object
+[X] Create a user interface where the user can input 2 values
+[X] Select the type of mathematical operation 
+    [X] When the submit(=) button is clicked OR .on click function
+    [X] Add it to an object
     [] Send it to the SERVER via a  ## POST method ##
+        [] 
     [] Clear the input fields using a 'C' button
 
 
 ## Server
 [X] Add Node
-[] Add Express
-[] Add JSON parsers
+[X] Add Express
+[X] Add JSON parsers
 
-[] Insert an addition function to handle logic for the following
+[] Insert  function to handle logic for the following
     [] Addition
     [] Subtraction
     [] Multiplication
