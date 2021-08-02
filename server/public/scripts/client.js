@@ -3,12 +3,12 @@ console.log('hi');
 
 //Global array collecting input value one
  let userValue = { };
- 
+
  //set a global variable to a button on the interface to be able to track it
  let buttonClicked;   
 
  //declaring a variable that hold all calculation totals
-let calculationTotals = [];
+
 
 //getting our jQuery function installed to the page
 function onReady(){
@@ -28,6 +28,7 @@ function onReady(){
 };
 
 function postNum(){
+    event.preventDefault();
     // console.log('here');
     let numOne = $('#numOne').val();
     let numTwo = $('#numTwo').val();
@@ -66,12 +67,13 @@ function displayAnswers(){
         method: 'GET',
         url: '/returnValue'
     }).then(function (response) {
-       let calcTotals = $('#calcTotals')
+       let calcTotals = $('#calcTotals');
+       let inputValues = $('#historyValues');
        for(let calc of response){
            calcTotals.text(calc.calculation)
-       }
+           $(inputValues).append(`<li>${calc.val1} ${calc.operator} ${calc.val2} = ${calc.calculation}</li>`)}
     });
-    $('#historyValues').append('totals');
+    
 };
 
 

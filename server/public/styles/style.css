@@ -1,0 +1,71 @@
+* {
+  margin: auto 0;
+}
+
+body {
+  background: rgb(144, 139, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(144, 139, 246, 1) 2%,
+    rgba(91, 232, 245, 1) 49%,
+    rgba(173, 249, 248, 1) 95%
+  );
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}
+
+.calculatorArea {
+  margin-left: 60px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#numOne {
+  padding: 5px;
+}
+
+#numTwo {
+  padding: 5px;
+}
+
+#additionBttn.btn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+#subtractionBttn.btn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+#multiplicationBttn.btn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+#divisionBttn.btn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+#equalsBttn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+#clearBttn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}

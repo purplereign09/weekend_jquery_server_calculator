@@ -29,7 +29,7 @@ if(userValue.operator === 'additionBttn'){
         val2: userValue.val2,
         operator: userValue.operator
         };
-        returnValue = [];
+        (returnValue) = [];
         returnValue.push(addition);
       }; 
 
@@ -40,8 +40,8 @@ if(userValue.operator === 'subtractionBttn'){
         val2: userValue.val2,
         operator: userValue.operator
         };
-        returnValue = [];
-        returnValue.push(subtraction);
+        (returnValue) = [];
+        (returnValue).push(subtraction);
       }; 
 
 if(userValue.operator === 'multiplicationBttn'){
@@ -51,8 +51,8 @@ if(userValue.operator === 'multiplicationBttn'){
         val2: userValue.val2,
         operator: userValue.operator
         };
-        returnValue = [];
-        returnValue.push(multiplication);
+        (returnValue) = [];
+        (returnValue).push(multiplication);
       }; 
 
 if(userValue.operator === 'divisionBttn'){
@@ -62,8 +62,8 @@ if(userValue.operator === 'divisionBttn'){
         val2: userValue.val2,
         operator: userValue.operator
         };
-        returnValue = [];
-        returnValue.push(division);
+        (returnValue) = [];
+        (returnValue).push(division);
       }; 
 
   res.sendStatus(200);
@@ -77,7 +77,7 @@ app.get('/returnValue', function(req, res) {
 
   //sending back the return value (calculate numbers function + userhistory)
   res.send(returnValue);
-});
+  });
 
 
 app.listen(PORT, () => {
