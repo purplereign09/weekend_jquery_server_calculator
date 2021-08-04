@@ -56,10 +56,8 @@ function postNum(){
 };
 
 function clearTotals(){
-    $('#clearBttn').click(function (){
         $('#numOne').val('');
         $('#numTwo').val('');
-    });
 };
 
 function displayAnswers(){
@@ -69,6 +67,7 @@ function displayAnswers(){
     }).then(function (response) {
        let calcTotals = $('#calcTotals');
        let inputValues = $('#historyValues');
+       inputValues.empty();
        for(let calc of response){
            calcTotals.text(calc.calculation)
            $(inputValues).append(`<li>${calc.val1} ${calc.operator} ${calc.val2} = ${calc.calculation}</li>`)}

@@ -27,9 +27,8 @@ if(userValue.operator === 'additionBttn'){
         calculation: Number(userValue.val1) + Number(userValue.val2),
         val1: userValue.val1, 
         val2: userValue.val2,
-        operator: userValue.operator
+        operator: '+'
         };
-        (returnValue) = [];
         returnValue.push(addition);
       }; 
 
@@ -38,9 +37,8 @@ if(userValue.operator === 'subtractionBttn'){
         calculation: Number(userValue.val1) - Number(userValue.val2),
         val1: userValue.val1, 
         val2: userValue.val2,
-        operator: userValue.operator
+        operator: '-'
         };
-        (returnValue) = [];
         (returnValue).push(subtraction);
       }; 
 
@@ -49,9 +47,8 @@ if(userValue.operator === 'multiplicationBttn'){
         calculation: Number(userValue.val1) * Number(userValue.val2),
         val1: userValue.val1, 
         val2: userValue.val2,
-        operator: userValue.operator
+        operator: '*'
         };
-        (returnValue) = [];
         (returnValue).push(multiplication);
       }; 
 
@@ -60,9 +57,8 @@ if(userValue.operator === 'divisionBttn'){
         calculation: Number(userValue.val1) / Number(userValue.val2),
         val1: userValue.val1, 
         val2: userValue.val2,
-        operator: userValue.operator
+        operator: '/'
         };
-        (returnValue) = [];
         (returnValue).push(division);
       }; 
 
